@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>My bank app</title>
+    </head>
+    <body>
+        <nav>
+            <p class="welcome"> Login to get started</p>
+            <img src="logo" alt="" class="logo">
+            <form class="login">
+                <input type="text" placeholder="Internet Banking ID"
+                class="login__input login-input--user">
+                
+                <input type="password" placeholder="PIN" class="login__input  login-pin--user">
+
+                <button class="login__btn">login</button>
+            </form>
+        </nav>
+
+        <main class="app">
+            <!-- balance -->
+            <div class="balance">
+                <div>
+                    <p class="balance__label">Current Balance</p>
+                    <p class="balance__date">
+                        As of <span class="date">05/03/2027</span>
+                    </p>
+                </div>
+                <div class="balance__value">0000#</div>
+            </div>
+
+              <!-- withdraw -->
+              <div class="movements">
+                <div class="movements__row">
+                    <div class="movements__type movement__type--deposit">2 deposit
+                        <div class="movement__date">2Days</div>
+                        <div class="movement_value">#400</div>
+                    </div>
+                </div>
+                <div class="movements__row">
+                    <div class="movements__type movement__type--withdraw">1withdraw
+                        <div class="movement__date">1day</div>
+                        <div class="movement__value">-#600</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- summary -->
+            <div class="summary">
+                <p class="summary__label">In</p>
+                <p class="summary__value summary__value--In">#0000</p>
+                <P class="summary__label">Out</P>
+                <p class="summary__value summary__value--Out">#000</p>
+                <p class="summary__label">Interest</p>
+                <p class="summary__value summary__value--interest">#000</p>
+                <button class="btn--sort">Sort</button>
+            </div>
+
+            <!-- opration:transfer -->
+           <div class="operation operation--transfer">
+               <h2>Transfer money</h2>
+               <form class="form form--transfer">
+                   <input type="text" class="form__input form__input--to">
+                   <input type="number" class="form__input form__input--amount">
+                   <button class="form__btn form__btn--transfer"></button>
+                   <label class="form__label">Transfer to</label>
+                   <label class="form__label">Amount</label>
+               </form>
+           </div>
+
+          
+            <!-- operation: loan-->
+            <div class="operation operation-loan">
+                <h2> Request loan</h2>
+                <form class="form form--loan">
+                    <input type="number" class="form__input form__input--loan">
+                    <button class="form__btn form__btn--loan"></button>
+                    <label class="form__label form__label--loan"></label>
+                </form>
+            </div>
+
+            <!-- opeartion: close -->
+            <div class="operation operation--close">
+                <h2> close account</h2>
+                <form class="form form--close">
+                    <input type="type" class="form__input form__input--user">
+                    <input type="password"  type="password" maxlength="6" class="form__input form__input--pin">
+                    <button class="form__btn form__btn--close"></button>
+                    <label class="form__label">Confirm User</label>
+                    <label for="form__label">Confirm Password</label>
+                </form>
+            </div>
+             <!-- logout timer -->
+             <p class="logout">
+                You will be logged ou in <span class="timer">0:500</span>
+            </p>
+        </main>
+        <script src="script.js"></script>
+
+    </body>
+</html>
